@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+{% block body %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bracket4</title>
+    <style>
+
+h1{ text-align: center;
+    font-family: "Constantia";
+    font-size: 50px;
+
+}
+
+h2{ text-align: center;
+    font-family: "Constantia";
+    font-size: 25px;
+}
+
+h3{ text-align: center;
+    font-family: "Constantia";
+    font-size: 20px;
+
+}
+
+div{ display: flex;
+     flex-direction: row;
+}
+ul{ display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    flex-grow: .1;
+    first-child:
+    last-child;
+    flex-grow:20
+}
+
+ul  {flex-grow: .1;}
+     first-child,
+     last-child{flex-grow: 20;}
+
+
+
+
+li.match{
+    padding-left: 20px;
+}
+li.match.winner{
+        font-weight: bold;
+        font-size: medium;
+}
+li.match span{
+    float: right;
+    margin-right: 5px;
+}
+li.match-top{
+    border-bottom: 2px solid #aaa;
+
+}
+li.match-spacer {
+    border-right: 1px solid #aaa;
+    min-height: 400px;
+}
+li.match-bottom {
+    border-top: 2px solid #aaa;
+    padding-top: 20px;
+}
+
+    </style>
+</head>
+
+
+<br>
+
+{% if tournament %}
+  <h1>{{ tournament.name }}</h1>
+    <h2> Run by {{ tournament.player_name }}</h2>
+    <h2> On the game {{ tournament.game_name }}</h2>
+        <h3> Description: {{ tournament.description }}</h3>
+{% else %}
+  <h1>error</h1>
+{% endif %}
+    <div class="bracket4">
+
+
+      <ul class="event first-event">
+        <li class="spacer"><br></li>
+
+        <li class="match match-top winner">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Player's Name" aria-label="Player's Name" aria-describedby="button-addon2">
+                <input type="number" class="form-control" placeholder="Score" aria-label="Score" id="text-addon2">
+            </div>
+        </li>
+        <li class="match match-spacer"><br></li>
+        <li class="match match-bottom ">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Player's Name" aria-label="Player's Name" aria-describedby="button-addon2">
+                <input type="number" class="form-control" placeholder="Score" aria-label="Score" id="text-addon2">
+            </div>
+        </li>
+
+        <li class="spacer"><br></li>
+
+        <li class="match match-top winner">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Player's Name" aria-label="Player's Name" aria-describedby="button-addon2">
+                <input type="number" class="form-control" placeholder="Score" aria-label="Score" id="text-addon2">
+            </div>
+        </li>
+        <li class="match match-spacer"><br></li>
+        <li class="match match-bottom ">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Player's Name" aria-label="Player's Name" aria-describedby="button-addon2">
+                <input type="number" class="form-control" placeholder="Score" aria-label="Score" id="text-addon2">
+            </div>
+        </li>
+
+
+
+        <li class="spacer"><br></li>
+      </ul>
+      <ul class="event second-event">
+        <li class="spacer"><br></li>
+
+        <li class="match match-top winner">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Player's Name" aria-label="Player's Name" aria-describedby="button-addon2">
+                <input type="number" class="form-control" placeholder="Score" aria-label="Score" id="text-addon2">
+            </div>
+        </li>
+        <li class="match match-spacer"><br></li>
+        <li class="match match-bottom ">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Player's Name" aria-label="Player's Name" aria-describedby="button-addon2">
+                <input type="number" class="form-control" placeholder="Score" aria-label="Score" id="text-addon2">
+            </div>
+        </li>
+
+        <li class="spacer"><br></li>
+
+        <li class="spacer"><br></li>
+      </ul>
+      <ul class="event third-event">
+        <li class="spacer">
+            <br>
+        </li>
+
+        <li class="match match-top winner">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Player's Name" aria-label="Player's Name" aria-describedby="button-addon2">
+                <input type="number" class="form-control" placeholder="Score" aria-label="Score" id="text-addon2">
+            </div>
+        </li>
+        <li class="match spacer">
+            <br>
+        </li>
+
+
+      </ul>
+
+    </div>
+    </ul>
+
+</html>
+{% endblock %}

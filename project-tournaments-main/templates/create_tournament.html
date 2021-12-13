@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+<style type="text/css">
+   body { background: #396ec4 !important; }
+</style>
+    <head>
+        <meta charset="UTF-8">
+        <title>Create Tournament</title>
+    </head>
+    <ul class = create>
+        <form action="{{ url_for('new_tournament') }}" method="post" class="add-entry">
+        <body>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class = "text-center"> Create a Tournament </h2>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Your Username" aria-label="Your Username" aria-describedby="basic-addon1" name="player_name">
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Name of Tournament" aria-label="Name of Tournament" aria-describedby="basic-addon2" name="name">
+                </div>
+
+
+                <div class="input-group mb-3">
+                    <select class="form-select" id="inputGroupSelect01" aria-label="Number of Players" name="size" type="number">
+                        <option value="" disabled selected hidden>Number of Players</option>
+                        <option value="4">4</option>
+                        <option value="8">8</option>
+                        <option value="16">16</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Name of Game" aria-label="Name of Game" name="game_name">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" placeholder="Wager Per Player (optional)" aria-label="Wager Per Player (optional)">
+                    <span class="input-group-text">.00</span>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text mb-3">Tournament Description</span>
+                    <textarea class="form-control mb-3" aria-label="Tournament Description" name="description"></textarea>
+
+                </div>
+
+                <div class="d-grid gap-2 col-md-6 mx-auto">
+                     <button type="submit" class="btn btn-dark btn-md">Submit</button>
+                </div>
+
+            </div>
+          </div>
+        </body>
+        </form>
+
+      </ul>
+
+
+
+</html>
+{% endblock %}

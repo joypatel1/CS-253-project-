@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% block body %}
+  <head>
+       <meta charset="UTF-8">
+       <title>Tournament Creator</title>
+   </head>
+<!-- Bootstrap documentation from https://getbootstrap.com/docs/5.1/components/navbar/ was used as reference for creating the Tournaments navbar -->
+
+    <body>
+
+     <br>
+     <br>
+     <div class="postion-relative">
+       <div class="position-absolute top-25 start-50 translate-middle">
+
+            <form action="{{ url_for('show_create_tournament') }}" method="get">
+                <input type="hidden" name="id">
+                <button class="btn btn-dark btn-lg" type="submit">Create Tournament</button>
+            </form>
+       </div>
+     </div>
+     <br>
+     <br>
+     <br>
+
+   <div class="container-xl">
+     <div class="row">
+       <div class="col">
+         <button type="button" class="btn btn-outline-dark">
+           <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1631908705" width=200 height=110>
+           Counter-Strike: Global Offensive
+         </button>
+       </div>
+       <div class="col">
+         <button type="button" class="btn btn-outline-dark">
+           <img src="https://media.vandal.net/i/1200x630/7-2020/2020729521097_1.jpg" width=200 height=110>
+           League of Legends
+         </button>
+       </div>
+       <div class="col">
+         <button type="button" class="btn btn-outline-dark">
+           <img src="https://cdn2.unrealengine.com/14br-consoles-1920x1080-wlogo-1920x1080-432974386.jpg" width=200 height=110>
+           Fortnite
+         </button>
+       </div>
+       <div class="col">
+         <button type="button" class="btn btn-outline-dark">
+           <img src="https://images.livemint.com/img/2020/06/03/1600x900/Valorant_1591218052835_1591218061187.jpg" width=200 height=110>
+           Valorant
+         </button>
+       </div>
+       <div class="col">
+         <button type="button" class="btn btn-outline-dark">
+           <img src="http://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blog/hero/mw-wz/WZ-Season-Three-Announce-TOUT.jpg" width=200 height=110>
+           Warzone
+         </button>
+       </div>
+     </div>
+     <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-outline-dark">
+            <img src="https://images7.alphacoders.com/707/707573.jpg" width=200 height=110>
+            Overwatch
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-outline-dark">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Rocket_League_coverart.jpg" width=200 height=110>
+            Rocket League
+          </button>
+        </div>
+       <div class="col">
+         <button type="button" class="btn btn-outline-dark">
+           <img src="https://p.kindpng.com/picc/s/785-7853343_rainbow-six-siege-hd-png-download.png" width=200 height=110>
+           Rainbow Six: Siege
+         </button>
+       </div>
+       <div class="col">
+         <button type="button" class="btn btn-outline-dark">
+           <img src="https://i.pinimg.com/originals/8a/8b/50/8a8b50da2bc4afa933718061fe291520.jpg" width=200 height=110>
+            Dota 2
+         </button>
+       </div>
+       <div class="col">
+         <button type="button" class="btn btn-outline-dark">
+           <img src="https://site-cdn.givemesport.com/images/21/09/09/93f1b7f06afe0e3cd87373f9487dc04f/960.jpg" width=200 height=110>
+            NBA 2K
+         </button>
+       </div>
+       </div>
+     </div>
+    </div>
+   </body>
+  </ul>
+{% endblock %}
+
